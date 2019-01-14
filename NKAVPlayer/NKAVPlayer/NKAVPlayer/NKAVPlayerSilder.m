@@ -49,7 +49,7 @@
         _slipImgView = [[UIImageView alloc] init];
         _slipImgView.contentMode = UIViewContentModeScaleAspectFit;
         _slipImgView.image = [UIImage imageNamed:@"btn_player_slider_thumb"];
-        _slipImgView.frame = CGRectMake(0, 0, SlipW, SlipW);
+        _slipImgView.frame = CGRectMake(0, (self.frame.size.height - SlipW) * 0.5, SlipW, SlipW);
         _slipImgView.userInteractionEnabled = YES;
     }
     return _slipImgView;

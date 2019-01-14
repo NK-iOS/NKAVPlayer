@@ -19,7 +19,7 @@
     if (_avPlayer == nil) {
         _avPlayer = [[AVPlayer alloc] init];
         // 设置默认音量
-        _avPlayer.volume = 0.5;
+//        _avPlayer.volume = 0.5;
         // 获取系统声音
         AVAudioSession *audioSession = [AVAudioSession sharedInstance];
         [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error:nil];
