@@ -41,4 +41,4 @@ NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"movie" ofType:@"m
 
 # 其他：
 * 自由开发者交流群：811483008
-* 附上：[简书](https://www.jianshu.com/p/299906d4054d)
+* 附上：[简书](https://www.jianshu.com/p/e3dd76a7d6c4)
