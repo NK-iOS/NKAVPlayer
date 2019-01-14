@@ -1,0 +1,655 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B457DDE21EAED2F0015C064 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B457DDD21EAED2F0015C064 /* AppDelegate.m */; };
+		1B457DE121EAED2F0015C064 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B457DE021EAED2F0015C064 /* ViewController.m */; };
+		1B457DE421EAED2F0015C064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B457DE221EAED2F0015C064 /* Main.storyboard */; };
+		1B457DE621EAED2F0015C064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B457DE521EAED2F0015C064 /* Assets.xcassets */; };
+		1B457DE921EAED2F0015C064 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B457DE721EAED2F0015C064 /* LaunchScreen.storyboard */; };
+		1B457DEC21EAED2F0015C064 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B457DEB21EAED2F0015C064 /* main.m */; };
+		1B457DF621EAED2F0015C064 /* NKAVPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B457DF521EAED2F0015C064 /* NKAVPlayerTests.m */; };
+		1B457E0121EAED2F0015C064 /* NKAVPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B457E0021EAED2F0015C064 /* NKAVPlayerUITests.m */; };
+		1B457E1121EAEECD0015C064 /* NKAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B457E1021EAEECD0015C064 /* NKAVPlayerView.m */; };
+		1B457E1421EAEF2D0015C064 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B457E1321EAEF2D0015C064 /* AVFoundation.framework */; };
+		1B457E1721EAF1810015C064 /* NKAVPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B457E1621EAF1810015C064 /* NKAVPlayerControlView.m */; };
+		1B457E1921EAFBE70015C064 /* movie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E1821EAFBE70015C064 /* movie.mp4 */; };
+		1B457E2521EB035C0015C064 /* btn_player_quit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E1B21EB035A0015C064 /* btn_player_quit@2x.png */; };
+		1B457E2621EB035C0015C064 /* btn_player_scale02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E1C21EB035A0015C064 /* btn_player_scale02@2x.png */; };
+		1B457E2721EB035C0015C064 /* btn_player_pause@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E1D21EB035A0015C064 /* btn_player_pause@3x.png */; };
+		1B457E2821EB035C0015C064 /* btn_player_play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E1E21EB035B0015C064 /* btn_player_play@3x.png */; };
+		1B457E2921EB035C0015C064 /* btn_player_scale02@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E1F21EB035B0015C064 /* btn_player_scale02@3x.png */; };
+		1B457E2A21EB035C0015C064 /* btn_player_scale01@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E2021EB035B0015C064 /* btn_player_scale01@3x.png */; };
+		1B457E2B21EB035C0015C064 /* btn_player_quit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E2121EB035B0015C064 /* btn_player_quit@3x.png */; };
+		1B457E2C21EB035C0015C064 /* btn_player_scale01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E2221EB035B0015C064 /* btn_player_scale01@2x.png */; };
+		1B457E2D21EB035C0015C064 /* btn_player_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E2321EB035B0015C064 /* btn_player_pause@2x.png */; };
+		1B457E2E21EB035C0015C064 /* btn_player_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E2421EB035B0015C064 /* btn_player_play@2x.png */; };
+		1B457E3121EB695D0015C064 /* NKAVPlayerSilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B457E3021EB695D0015C064 /* NKAVPlayerSilder.m */; };
+		1B457E3421EB71310015C064 /* btn_player_slider_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E3221EB71310015C064 /* btn_player_slider_thumb@2x.png */; };
+		1B457E3521EB71310015C064 /* btn_player_slider_thumb@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B457E3321EB71310015C064 /* btn_player_slider_thumb@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B457DF221EAED2F0015C064 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B457DD121EAED2F0015C064 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B457DD821EAED2F0015C064;
+			remoteInfo = NKAVPlayer;
+		};
+		1B457DFD21EAED2F0015C064 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B457DD121EAED2F0015C064 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B457DD821EAED2F0015C064;
+			remoteInfo = NKAVPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B457DD921EAED2F0015C064 /* NKAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NKAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B457DDC21EAED2F0015C064 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1B457DDD21EAED2F0015C064 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1B457DDF21EAED2F0015C064 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1B457DE021EAED2F0015C064 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1B457DE321EAED2F0015C064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B457DE521EAED2F0015C064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B457DE821EAED2F0015C064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B457DEA21EAED2F0015C064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B457DEB21EAED2F0015C064 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B457DF121EAED2F0015C064 /* NKAVPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NKAVPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B457DF521EAED2F0015C064 /* NKAVPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKAVPlayerTests.m; sourceTree = "<group>"; };
+		1B457DF721EAED2F0015C064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B457DFC21EAED2F0015C064 /* NKAVPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NKAVPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B457E0021EAED2F0015C064 /* NKAVPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKAVPlayerUITests.m; sourceTree = "<group>"; };
+		1B457E0221EAED2F0015C064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B457E0F21EAEECD0015C064 /* NKAVPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKAVPlayerView.h; sourceTree = "<group>"; };
+		1B457E1021EAEECD0015C064 /* NKAVPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKAVPlayerView.m; sourceTree = "<group>"; };
+		1B457E1321EAEF2D0015C064 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1B457E1521EAF1810015C064 /* NKAVPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKAVPlayerControlView.h; sourceTree = "<group>"; };
+		1B457E1621EAF1810015C064 /* NKAVPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKAVPlayerControlView.m; sourceTree = "<group>"; };
+		1B457E1821EAFBE70015C064 /* movie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = movie.mp4; sourceTree = "<group>"; };
+		1B457E1B21EB035A0015C064 /* btn_player_quit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_quit@2x.png"; sourceTree = "<group>"; };
+		1B457E1C21EB035A0015C064 /* btn_player_scale02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_scale02@2x.png"; sourceTree = "<group>"; };
+		1B457E1D21EB035A0015C064 /* btn_player_pause@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_pause@3x.png"; sourceTree = "<group>"; };
+		1B457E1E21EB035B0015C064 /* btn_player_play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_play@3x.png"; sourceTree = "<group>"; };
+		1B457E1F21EB035B0015C064 /* btn_player_scale02@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_scale02@3x.png"; sourceTree = "<group>"; };
+		1B457E2021EB035B0015C064 /* btn_player_scale01@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_scale01@3x.png"; sourceTree = "<group>"; };
+		1B457E2121EB035B0015C064 /* btn_player_quit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_quit@3x.png"; sourceTree = "<group>"; };
+		1B457E2221EB035B0015C064 /* btn_player_scale01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_scale01@2x.png"; sourceTree = "<group>"; };
+		1B457E2321EB035B0015C064 /* btn_player_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_pause@2x.png"; sourceTree = "<group>"; };
+		1B457E2421EB035B0015C064 /* btn_player_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_play@2x.png"; sourceTree = "<group>"; };
+		1B457E2F21EB695D0015C064 /* NKAVPlayerSilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NKAVPlayerSilder.h; sourceTree = "<group>"; };
+		1B457E3021EB695D0015C064 /* NKAVPlayerSilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NKAVPlayerSilder.m; sourceTree = "<group>"; };
+		1B457E3221EB71310015C064 /* btn_player_slider_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_slider_thumb@2x.png"; sourceTree = "<group>"; };
+		1B457E3321EB71310015C064 /* btn_player_slider_thumb@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_player_slider_thumb@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B457DD621EAED2F0015C064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B457E1421EAEF2D0015C064 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B457DEE21EAED2F0015C064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B457DF921EAED2F0015C064 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B457DD021EAED2F0015C064 = {
+			isa = PBXGroup;
+			children = (
+				1B457DDB21EAED2F0015C064 /* NKAVPlayer */,
+				1B457DF421EAED2F0015C064 /* NKAVPlayerTests */,
+				1B457DFF21EAED2F0015C064 /* NKAVPlayerUITests */,
+				1B457DDA21EAED2F0015C064 /* Products */,
+				1B457E1221EAEF2D0015C064 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1B457DDA21EAED2F0015C064 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B457DD921EAED2F0015C064 /* NKAVPlayer.app */,
+				1B457DF121EAED2F0015C064 /* NKAVPlayerTests.xctest */,
+				1B457DFC21EAED2F0015C064 /* NKAVPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B457DDB21EAED2F0015C064 /* NKAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				1B457E1821EAFBE70015C064 /* movie.mp4 */,
+				1B457E0E21EAEEBD0015C064 /* NKAVPlayer */,
+				1B457DDC21EAED2F0015C064 /* AppDelegate.h */,
+				1B457DDD21EAED2F0015C064 /* AppDelegate.m */,
+				1B457DDF21EAED2F0015C064 /* ViewController.h */,
+				1B457DE021EAED2F0015C064 /* ViewController.m */,
+				1B457DE221EAED2F0015C064 /* Main.storyboard */,
+				1B457DE521EAED2F0015C064 /* Assets.xcassets */,
+				1B457DE721EAED2F0015C064 /* LaunchScreen.storyboard */,
+				1B457DEA21EAED2F0015C064 /* Info.plist */,
+				1B457DEB21EAED2F0015C064 /* main.m */,
+			);
+			path = NKAVPlayer;
+			sourceTree = "<group>";
+		};
+		1B457DF421EAED2F0015C064 /* NKAVPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				1B457DF521EAED2F0015C064 /* NKAVPlayerTests.m */,
+				1B457DF721EAED2F0015C064 /* Info.plist */,
+			);
+			path = NKAVPlayerTests;
+			sourceTree = "<group>";
+		};
+		1B457DFF21EAED2F0015C064 /* NKAVPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1B457E0021EAED2F0015C064 /* NKAVPlayerUITests.m */,
+				1B457E0221EAED2F0015C064 /* Info.plist */,
+			);
+			path = NKAVPlayerUITests;
+			sourceTree = "<group>";
+		};
+		1B457E0E21EAEEBD0015C064 /* NKAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				1B457E1A21EB03510015C064 /* Resource */,
+				1B457E0F21EAEECD0015C064 /* NKAVPlayerView.h */,
+				1B457E1021EAEECD0015C064 /* NKAVPlayerView.m */,
+				1B457E1521EAF1810015C064 /* NKAVPlayerControlView.h */,
+				1B457E1621EAF1810015C064 /* NKAVPlayerControlView.m */,
+				1B457E2F21EB695D0015C064 /* NKAVPlayerSilder.h */,
+				1B457E3021EB695D0015C064 /* NKAVPlayerSilder.m */,
+			);
+			path = NKAVPlayer;
+			sourceTree = "<group>";
+		};
+		1B457E1221EAEF2D0015C064 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B457E1321EAEF2D0015C064 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B457E1A21EB03510015C064 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1B457E3221EB71310015C064 /* btn_player_slider_thumb@2x.png */,
+				1B457E3321EB71310015C064 /* btn_player_slider_thumb@3x.png */,
+				1B457E2321EB035B0015C064 /* btn_player_pause@2x.png */,
+				1B457E1D21EB035A0015C064 /* btn_player_pause@3x.png */,
+				1B457E2421EB035B0015C064 /* btn_player_play@2x.png */,
+				1B457E1E21EB035B0015C064 /* btn_player_play@3x.png */,
+				1B457E1B21EB035A0015C064 /* btn_player_quit@2x.png */,
+				1B457E2121EB035B0015C064 /* btn_player_quit@3x.png */,
+				1B457E2221EB035B0015C064 /* btn_player_scale01@2x.png */,
+				1B457E2021EB035B0015C064 /* btn_player_scale01@3x.png */,
+				1B457E1C21EB035A0015C064 /* btn_player_scale02@2x.png */,
+				1B457E1F21EB035B0015C064 /* btn_player_scale02@3x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B457DD821EAED2F0015C064 /* NKAVPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B457E0521EAED2F0015C064 /* Build configuration list for PBXNativeTarget "NKAVPlayer" */;
+			buildPhases = (
+				1B457DD521EAED2F0015C064 /* Sources */,
+				1B457DD621EAED2F0015C064 /* Frameworks */,
+				1B457DD721EAED2F0015C064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NKAVPlayer;
+			productName = NKAVPlayer;
+			productReference = 1B457DD921EAED2F0015C064 /* NKAVPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1B457DF021EAED2F0015C064 /* NKAVPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B457E0821EAED2F0015C064 /* Build configuration list for PBXNativeTarget "NKAVPlayerTests" */;
+			buildPhases = (
+				1B457DED21EAED2F0015C064 /* Sources */,
+				1B457DEE21EAED2F0015C064 /* Frameworks */,
+				1B457DEF21EAED2F0015C064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B457DF321EAED2F0015C064 /* PBXTargetDependency */,
+			);
+			name = NKAVPlayerTests;
+			productName = NKAVPlayerTests;
+			productReference = 1B457DF121EAED2F0015C064 /* NKAVPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1B457DFB21EAED2F0015C064 /* NKAVPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B457E0B21EAED2F0015C064 /* Build configuration list for PBXNativeTarget "NKAVPlayerUITests" */;
+			buildPhases = (
+				1B457DF821EAED2F0015C064 /* Sources */,
+				1B457DF921EAED2F0015C064 /* Frameworks */,
+				1B457DFA21EAED2F0015C064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B457DFE21EAED2F0015C064 /* PBXTargetDependency */,
+			);
+			name = NKAVPlayerUITests;
+			productName = NKAVPlayerUITests;
+			productReference = 1B457DFC21EAED2F0015C064 /* NKAVPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B457DD121EAED2F0015C064 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "聂宽";
+				TargetAttributes = {
+					1B457DD821EAED2F0015C064 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					1B457DF021EAED2F0015C064 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1B457DD821EAED2F0015C064;
+					};
+					1B457DFB21EAED2F0015C064 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1B457DD821EAED2F0015C064;
+					};
+				};
+			};
+			buildConfigurationList = 1B457DD421EAED2F0015C064 /* Build configuration list for PBXProject "NKAVPlayer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B457DD021EAED2F0015C064;
+			productRefGroup = 1B457DDA21EAED2F0015C064 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B457DD821EAED2F0015C064 /* NKAVPlayer */,
+				1B457DF021EAED2F0015C064 /* NKAVPlayerTests */,
+				1B457DFB21EAED2F0015C064 /* NKAVPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B457DD721EAED2F0015C064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B457E1921EAFBE70015C064 /* movie.mp4 in Resources */,
+				1B457E3421EB71310015C064 /* btn_player_slider_thumb@2x.png in Resources */,
+				1B457E2821EB035C0015C064 /* btn_player_play@3x.png in Resources */,
+				1B457E2C21EB035C0015C064 /* btn_player_scale01@2x.png in Resources */,
+				1B457DE921EAED2F0015C064 /* LaunchScreen.storyboard in Resources */,
+				1B457E2D21EB035C0015C064 /* btn_player_pause@2x.png in Resources */,
+				1B457E2921EB035C0015C064 /* btn_player_scale02@3x.png in Resources */,
+				1B457E2E21EB035C0015C064 /* btn_player_play@2x.png in Resources */,
+				1B457DE621EAED2F0015C064 /* Assets.xcassets in Resources */,
+				1B457E2621EB035C0015C064 /* btn_player_scale02@2x.png in Resources */,
+				1B457E2521EB035C0015C064 /* btn_player_quit@2x.png in Resources */,
+				1B457DE421EAED2F0015C064 /* Main.storyboard in Resources */,
+				1B457E2721EB035C0015C064 /* btn_player_pause@3x.png in Resources */,
+				1B457E3521EB71310015C064 /* btn_player_slider_thumb@3x.png in Resources */,
+				1B457E2A21EB035C0015C064 /* btn_player_scale01@3x.png in Resources */,
+				1B457E2B21EB035C0015C064 /* btn_player_quit@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B457DEF21EAED2F0015C064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B457DFA21EAED2F0015C064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B457DD521EAED2F0015C064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B457DE121EAED2F0015C064 /* ViewController.m in Sources */,
+				1B457DEC21EAED2F0015C064 /* main.m in Sources */,
+				1B457E1721EAF1810015C064 /* NKAVPlayerControlView.m in Sources */,
+				1B457E1121EAEECD0015C064 /* NKAVPlayerView.m in Sources */,
+				1B457DDE21EAED2F0015C064 /* AppDelegate.m in Sources */,
+				1B457E3121EB695D0015C064 /* NKAVPlayerSilder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B457DED21EAED2F0015C064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B457DF621EAED2F0015C064 /* NKAVPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B457DF821EAED2F0015C064 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B457E0121EAED2F0015C064 /* NKAVPlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B457DF321EAED2F0015C064 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B457DD821EAED2F0015C064 /* NKAVPlayer */;
+			targetProxy = 1B457DF221EAED2F0015C064 /* PBXContainerItemProxy */;
+		};
+		1B457DFE21EAED2F0015C064 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B457DD821EAED2F0015C064 /* NKAVPlayer */;
+			targetProxy = 1B457DFD21EAED2F0015C064 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1B457DE221EAED2F0015C064 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B457DE321EAED2F0015C064 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1B457DE721EAED2F0015C064 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B457DE821EAED2F0015C064 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B457E0321EAED2F0015C064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1B457E0421EAED2F0015C064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B457E0621EAED2F0015C064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7P9459R55V;
+				INFOPLIST_FILE = NKAVPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NKAVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7560fce8-84ca-4888-8b63-9895810443fc";
+				PROVISIONING_PROFILE_SPECIFIER = NK_Common_Profile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B457E0721EAED2F0015C064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 7P9459R55V;
+				INFOPLIST_FILE = NKAVPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NKAVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7560fce8-84ca-4888-8b63-9895810443fc";
+				PROVISIONING_PROFILE_SPECIFIER = NK_Common_Profile;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1B457E0921EAED2F0015C064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NKAVPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NKAVPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NKAVPlayer.app/NKAVPlayer";
+			};
+			name = Debug;
+		};
+		1B457E0A21EAED2F0015C064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NKAVPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NKAVPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NKAVPlayer.app/NKAVPlayer";
+			};
+			name = Release;
+		};
+		1B457E0C21EAED2F0015C064 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NKAVPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NKAVPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NKAVPlayer;
+			};
+			name = Debug;
+		};
+		1B457E0D21EAED2F0015C064 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NKAVPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NKAVPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NKAVPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B457DD421EAED2F0015C064 /* Build configuration list for PBXProject "NKAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B457E0321EAED2F0015C064 /* Debug */,
+				1B457E0421EAED2F0015C064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B457E0521EAED2F0015C064 /* Build configuration list for PBXNativeTarget "NKAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B457E0621EAED2F0015C064 /* Debug */,
+				1B457E0721EAED2F0015C064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B457E0821EAED2F0015C064 /* Build configuration list for PBXNativeTarget "NKAVPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B457E0921EAED2F0015C064 /* Debug */,
+				1B457E0A21EAED2F0015C064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B457E0B21EAED2F0015C064 /* Build configuration list for PBXNativeTarget "NKAVPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B457E0C21EAED2F0015C064 /* Debug */,
+				1B457E0D21EAED2F0015C064 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1B457DD121EAED2F0015C064 /* Project object */;
+}
