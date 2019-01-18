@@ -33,7 +33,7 @@ NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"movie" ofType:@"m
 }
 ```
 这样视频播放就完成，附上运行效果：
-![视频播放](https://upload-images.jianshu.io/upload_images/1721864-89b8483faad431c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
+![视频播放](http://code.cocoachina.com/uploads/attachments/20190114/137976/55f814168859b1d0e16034c3f90c7c23.gif)
 
 # 上线APP：
 <img src="https://upload-images.jianshu.io/upload_images/1721864-0feb4befb2dddb9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="60px" height="60px">
