@@ -10,13 +10,15 @@
 
 typedef void(^TapChangeValue)(float value);
 @interface NKAVPlayerSilder : UIView
+@property (nonatomic, strong) UIView *tapView;
 @property (nonatomic, strong) UIView *baseView;
 @property (nonatomic, strong) UIView *bufferView;
-@property (nonatomic, strong) UIView *finishView;
+@property (nonatomic, strong) UIView *trackView;
 @property (nonatomic, strong) UIImageView *slipImgView;
 
 @property (nonatomic, assign) float bufferValue;
-@property (nonatomic, assign) float finishValue;
+@property (nonatomic, assign) float trackValue;
 
 @property (nonatomic, copy) TapChangeValue tapChangeValue;
+
 @end

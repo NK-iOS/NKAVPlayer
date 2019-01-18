@@ -125,7 +125,7 @@
 {
     if (_playerSilder == nil) {
         _playerSilder = [[NKAVPlayerSilder alloc] init];
-        _playerSilder.finishValue = 0;
+        _playerSilder.trackValue = 0;
     }
     return _playerSilder;
 }
@@ -160,7 +160,7 @@
 - (void)timerRunAction
 {
     self.timerIndex++;
-    if (self.timerIndex == 3) {
+    if (self.timerIndex == 4) {
         self.timerIndex = 0;
         [self.timer setFireDate:[NSDate distantFuture]];
         [self hideAnimate];

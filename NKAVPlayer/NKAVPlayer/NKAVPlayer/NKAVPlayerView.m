@@ -202,7 +202,7 @@
 {
     CMTime duration = _playerItem.duration;
     self.controlView.timeLabel.text = [NSString stringWithFormat:@"%.0f:%.0f", currentPlayTime, CMTimeGetSeconds(duration)];
-    self.controlView.playerSilder.finishValue = currentPlayTime / CMTimeGetSeconds(duration);
+    self.controlView.playerSilder.trackValue = currentPlayTime / CMTimeGetSeconds(duration);
 }
 
 // 更新缓冲进度

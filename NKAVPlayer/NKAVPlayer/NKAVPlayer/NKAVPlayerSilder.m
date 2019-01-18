@@ -9,18 +9,29 @@
 #import "NKAVPlayerSilder.h"
 
 #define SilderH 3
-#define SlipW 10
+#define SlipW 12
 @implementation NKAVPlayerSilder
+
+- (UIView *)tapView
+{
+    if (_tapView == nil) {
+        _tapView = [[UIView alloc] init];
+        _tapView.frame = CGRectMake(0, (self.frame.size.height - SlipW) / 2, self.frame.size.width, SlipW);
+        UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGRAction:)];
+        [_tapView addGestureRecognizer:tapGR];
+    }
+    return _tapView;
+}
 
 - (UIView *)baseView
 {
     if (_baseView == nil) {
         _baseView = [[UIView alloc] init];
-        _baseView.backgroundColor = [UIColor grayColor];
-        _baseView.frame = CGRectMake(0, (self.frame.size.height - SilderH) / 2, self.frame.size.width, SilderH);
+        _baseView.backgroundColor = [UIColor whiteColor];
+//        _baseView.frame = CGRectMake(0, (SlipW - SilderH) / 2, self.frame.size.width, SilderH);
         _baseView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
     }
-    return _bufferView;
+    return _baseView;
 }
 
 - (UIView *)bufferView
@@ -28,19 +39,19 @@
     if (_bufferView == nil) {
         _bufferView = [[UIView alloc] init];
         _bufferView.backgroundColor = [UIColor grayColor];
-        _bufferView.frame = CGRectMake(0, (self.frame.size.height - SilderH) / 2, 0, SilderH);
+//        _bufferView.frame = CGRectMake(0, (SlipW - SilderH) / 2, 0, SilderH);
     }
     return _bufferView;
 }
 
-- (UIView *)finishView
+- (UIView *)trackView
 {
-    if (_finishView == nil) {
-        _finishView = [[UIView alloc] init];
-        _finishView.backgroundColor = [UIColor orangeColor];
-        _finishView.frame = CGRectMake(0,(self.frame.size.height - SilderH) / 2, 0, SilderH);
+    if (_trackView == nil) {
+        _trackView = [[UIView alloc] init];
+        _trackView.backgroundColor = [UIColor orangeColor];
+//        _trackView.frame = CGRectMake(0, (SlipW - SilderH) / 2, 0, SilderH);
     }
-    return _finishView;
+    return _trackView;
 }
 
 - (UIImageView *)slipImgView
@@ -49,8 +60,9 @@
         _slipImgView = [[UIImageView alloc] init];
         _slipImgView.contentMode = UIViewContentModeScaleAspectFit;
         _slipImgView.image = [UIImage imageNamed:@"btn_player_slider_thumb"];
-        _slipImgView.frame = CGRectMake(0, (self.frame.size.height - SlipW) * 0.5, SlipW, SlipW);
+//        _slipImgView.frame = CGRectMake(0, (self.frame.size.height - SlipW) * 0.5, SlipW, SlipW);
         _slipImgView.userInteractionEnabled = YES;
+        [_slipImgView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(slipImgPanGRAction:)]];
     }
     return _slipImgView;
 }
@@ -59,12 +71,11 @@
 {
     if (self = [super init]) {
         
-        [self addSubview:self.bufferView];
-        [self addSubview:self.finishView];
+        [self addSubview:self.tapView];
+        [self.tapView addSubview:self.baseView];
+        [self.tapView addSubview:self.bufferView];
+        [self.tapView addSubview:self.trackView];
         [self addSubview:self.slipImgView];
-        
-        UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGRAction:)];
-        [self addGestureRecognizer:tapGR];
     }
     return self;
 }
@@ -75,63 +86,60 @@
     
     if (self.tapChangeValue) {
         self.tapChangeValue(touchPoint.x / self.frame.size.width);
-        self.finishValue = touchPoint.x / self.frame.size.width;
+//        self.trackValue = touchPoint.x / self.frame.size.width;
+    }
+}
+
+- (void)slipImgPanGRAction:(UIPanGestureRecognizer *)panGR
+{
+    //获取偏移量
+    CGFloat moveX = [panGR translationInView:self].x;
+    
+    //重置偏移量，避免下次获取到的是原基础的增量
+    [panGR setTranslation:CGPointMake(0, 0) inView:self];
+    
+    //计算当前中心值
+    CGFloat centerX = CGRectGetMaxX(self.slipImgView.frame) - SlipW * 0.5 + moveX;
+    
+    //防止瞬间大偏移量滑动影响显示效果
+    if (centerX < 10) centerX = 10;
+    if (centerX > self.bounds.size.width - 10) centerX = self.bounds.size.width - 10;
+    
+    self.trackValue = centerX / self.frame.size.width;
+    
+    if (panGR.state == UIGestureRecognizerStateEnded) {
+        
+        if (self.tapChangeValue) {
+            self.tapChangeValue((CGRectGetMaxX(self.slipImgView.frame) - SlipW * 0.5) / self.frame.size.width);
+        }
     }
 }
 
 - (void)setBufferValue:(float)bufferValue
 {
     _bufferValue = bufferValue;
-    self.bufferView.frame = CGRectMake(0, (self.frame.size.height - SilderH) / 2, self.frame.size.width * (bufferValue / 1.0), CGRectGetHeight(self.bufferView.frame));
+    self.bufferView.frame = CGRectMake(0, (SlipW - SilderH) / 2, self.frame.size.width * (bufferValue / 1.0), CGRectGetHeight(self.bufferView.frame));
 }
 
-- (void)setFinishValue:(float)finishValue
+- (void)setTrackValue:(float)trackValue
 {
-    _finishValue = finishValue;
-    CGFloat finishW = self.frame.size.width * finishValue;
-    self.finishView.frame = CGRectMake(0, (self.frame.size.height - SilderH) / 2, finishW, CGRectGetHeight(self.finishView.frame));
+    _trackValue = trackValue;
+    
+    CGFloat finishW = self.frame.size.width * trackValue;
+    self.trackView.frame = CGRectMake(0, (SlipW - SilderH) / 2, finishW, CGRectGetHeight(self.trackView.frame));
     self.slipImgView.frame = CGRectMake(finishW - SlipW * 0.5, (self.frame.size.height - SlipW) * 0.5, SlipW, SlipW);
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.baseView.frame = CGRectMake(0, (self.frame.size.height - SilderH) / 2, self.frame.size.width, SilderH);
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-  
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
     
-    UITouch *touch = [[event touchesForView:self] anyObject];
-    CGPoint locationPoint = [touch locationInView:self];
-    NSLog(@"-------- %@", NSStringFromCGPoint(locationPoint));
-    if (locationPoint.x == 0) {
-        return;
-    }
-    self.finishValue = locationPoint.x / self.frame.size.width;
-}
+    self.tapView.frame = CGRectMake(0, (self.frame.size.height - SlipW) / 2, self.frame.size.width, SlipW);
+    self.baseView.frame = CGRectMake(0, (SlipW - SilderH) / 2, self.frame.size.width, SilderH);
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [[event touchesForView:self] anyObject];
-    CGPoint locationPoint = [touch locationInView:self];
-    if (locationPoint.x == 0) {
-        return;
-    }
-    self.finishValue = locationPoint.x / self.frame.size.width;
-    if (self.tapChangeValue) {
-        self.tapChangeValue(locationPoint.x / self.frame.size.width);
-    }
-}
-
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    
+    self.bufferView.frame = CGRectMake(0, (SlipW - SilderH) / 2, 0, SilderH);
+    self.trackView.frame = CGRectMake(0, (SlipW - SilderH) / 2, 0, SilderH);
+    self.slipImgView.frame = CGRectMake(0, (self.frame.size.height - SlipW) * 0.5, SlipW, SlipW);
 }
 
 @end
